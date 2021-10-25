@@ -14,13 +14,6 @@ function _draw(){
 
 
 
-
-
-
-
-
-
-
 export class QuestionsController{
 
     constructor(){
@@ -36,4 +29,15 @@ export class QuestionsController{
             console.error(error,'red and spooky')
         }
     }
+
+async getGuess(answer){
+    try {await questionsService.getGuess(answer)
+        
+    } catch (error) {
+        console.error(error, 'not goin happen')
+    }
+
+}
+
+
 }

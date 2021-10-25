@@ -13,7 +13,7 @@ export class Question{
 
 get Template(){
     return `<h3> ${this.question}</h3>
-    <button class="mx-5 bg-danger">TRUE</button><button class="bg-danger">FALSE</button>`
+    <button class="mx-5 bg-danger" onclick="app.questionsController.getGuess('True')">TRUE</button><button class="bg-danger" onclick="app.questionsController.getGuess('False')">FALSE</button>`
    
 }
 
