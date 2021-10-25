@@ -1,5 +1,6 @@
+import { ProxyState } from "../AppState.js"
 import {api} from "./AxiosService.js"
-
+import {Question} from "../Models/Question.js"
 
 
 
@@ -12,6 +13,7 @@ import {api} from "./AxiosService.js"
      async getquestions(){
         const res = await api.get()
         console.log(res.data.results[0])
+        ProxyState.questions = res.data.results.map(q => new Question(q))
      }
 
 
